@@ -58,8 +58,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         color = MaterialTheme.colorScheme.primary,
         modifier = Modifier.padding(2.5.dp)
         ) {
-        Row {
-            Column(modifier = Modifier.padding(24.dp).weight(1f)){
+        Row (modifier = Modifier.padding(24.dp)){
+            Column(modifier = Modifier.weight(1f)){
                 Text(
                     color = Color.White,
                     text = "Hello, "
