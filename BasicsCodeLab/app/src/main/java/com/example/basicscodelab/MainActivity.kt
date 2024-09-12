@@ -7,6 +7,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -20,9 +21,12 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
@@ -37,6 +41,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             BasicsCodeLabTheme {
                 MyApp()
+                OnboardingScreen()
             }
         }
     }
@@ -56,10 +61,11 @@ fun MyApp(names: List<String> = listOf("World", "Compose")) {
 
     }
 }
+
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    val expanded = remember { mutableStateOf(false) }
-    val extraPadding = if (expanded.value) 48.dp else 0.dp
+    var expanded by remember { mutableStateOf(false) }
+    val extraPadding = if (expanded) 48.dp else 0.dp
     Surface(
         color = MaterialTheme.colorScheme.primary,
         modifier = Modifier.padding(2.5.dp)
@@ -78,13 +84,13 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                 )
             }
             OutlinedButton(
-                onClick = {expanded.value = !expanded.value},
+                onClick = {expanded = !expanded},
                 colors = ButtonDefaults.outlinedButtonColors(
                     containerColor = Color.White,  // Set the button background to white
                     contentColor = Color.Black     // Set the text color to black
                 )
                 ) {
-                if (expanded.value) {
+                if (expanded) {
                     Text(
                         text = "Show more",
                     )
@@ -96,6 +102,40 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             }
         }
     }
+}
+
+@Composable
+fun OnboardingScreen(modifier: Modifier = Modifier) {
+    var shouldShowOnboarding by remember { mutableStateOf(true) }
+
+    Surface {
+        Column(
+            modifier = modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text("Welcome to the Basics Codelab!")
+            Button(
+                modifier = Modifier.padding(vertical = 24.dp),
+                onClick = { shouldShowOnboarding = false }
+            ) {
+                Text("Continue")
+            }
+        }
+    }
+}
+
+@Preview(showBackground = true, widthDp = 320, heightDp = 320)
+@Composable
+fun OnboardingPreview() {
+    BasicsCodelabTheme {
+        OnboardingScreen()
+    }
+}
+
+@Composable
+fun BasicsCodelabTheme(content: @Composable () -> Unit) {
+    OnboardingScreen()
 }
 
 @Preview(showBackground = true)
