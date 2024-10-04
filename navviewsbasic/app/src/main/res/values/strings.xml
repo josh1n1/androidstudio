@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">navviewsbasic</string>
+    <string name="title_home">Biography</string>
+    <string name="title_dashboard">Interest</string>
+    <string name="title_notifications">Definition</string>
+    <string name="interest">Interest</string>
+    <string name="definition">Definition</string>
+    <string name="biography">Biography</string>
+    <string name="Interest" />
+</resources>
