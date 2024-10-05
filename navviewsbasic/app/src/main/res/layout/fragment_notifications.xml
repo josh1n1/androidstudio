@@ -7,6 +7,28 @@
     tools:context=".ui.notifications.NotificationsFragment">
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="148dp"
+        android:paddingBottom="16dp"
+        android:text="Android Application"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="73dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="309dp"
+        android:layout_height="124dp"
+        android:layout_marginBottom="32dp"
+        android:padding="4dp"
+        android:text="Android applications are software programs developed to run on the Android platform. They are primarily built using Java or Kotlin and provide a wide range of functionalities, such as games, productivity tools, or social media platforms."
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_notifications"
+        tools:layout_editor_absoluteX="73dp" />
+
+    <TextView
         android:id="@+id/text_notifications"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,4 +41,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

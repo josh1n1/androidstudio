@@ -6,6 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.BiographyFragment">
 
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
+        android:padding="4dp"
+        android:text="Name:Bigcas,Jonathan"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/text_home"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="40dp"
+        android:padding="4dp"
+        android:text="Age: 20"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/text_home"
+        tools:layout_editor_absoluteX="18dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="364dp"
+        android:layout_height="126dp"
+        android:padding="4dp"
+        android:text="Brief Description:I am a student at the University of the cordilleras."
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_home"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="16dp" />
+
     <TextView
         android:id="@+id/text_home"
         android:layout_width="match_parent"
@@ -17,7 +52,18 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.494" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="277dp"
+        android:layout_height="168dp"
+        android:layout_marginBottom="128dp"
+        android:src="@drawable/jo"
+        app:layout_constraintBottom_toTopOf="@+id/text_home"
+        tools:layout_editor_absoluteX="-61dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
