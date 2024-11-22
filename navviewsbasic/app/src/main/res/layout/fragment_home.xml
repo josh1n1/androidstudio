@@ -7,39 +7,43 @@
     tools:context=".ui.home.BiographyFragment">
 
 
-
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="88dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="84dp"
         android:padding="4dp"
         android:text="Name:Bigcas,Jonathan"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/text_home"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:id="@+id/textView4"
         android:layout_width="0dp"
         android:layout_height="32dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="28dp"
         android:padding="4dp"
         android:text="Age: 20"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/text_home"
-        tools:layout_editor_absoluteX="18dp" />
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="364dp"
-        android:layout_height="126dp"
+        android:layout_width="310dp"
+        android:layout_height="123dp"
         android:padding="4dp"
         android:text="Brief Description:I am a student at the University of the cordilleras."
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/text_home"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintVertical_bias="0.051" />
 
     <TextView
         android:id="@+id/text_home"
@@ -61,9 +65,9 @@
         android:id="@+id/imageView"
         android:layout_width="277dp"
         android:layout_height="168dp"
-        android:layout_marginBottom="128dp"
+        android:layout_marginBottom="144dp"
         android:src="@drawable/jo"
         app:layout_constraintBottom_toTopOf="@+id/text_home"
-        tools:layout_editor_absoluteX="-61dp" />
+        tools:layout_editor_absoluteX="61dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

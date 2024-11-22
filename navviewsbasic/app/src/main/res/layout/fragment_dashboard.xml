@@ -7,27 +7,27 @@
     tools:context=".ui.dashboard.InterestFragment">
 
     <TextView
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="197dp"
-        android:layout_marginBottom="116dp"
+        android:layout_marginTop="288dp"
         android:paddingBottom="16dp"
         android:text="Field of Interest:Technology And Robotics"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/text_dashboard"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="16dp" />
+        tools:layout_editor_absoluteX="8dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="439dp"
+        android:layout_width="383dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="280dp"
         android:padding="4dp"
         android:text="Description:I am interested in building smart devices and exploring the world of automation using IoT and robotics."
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/text_dashboard"
